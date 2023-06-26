@@ -1,0 +1,31 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "openradioss",
+	"patterns": [
+		{
+			"include": "#keyword"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keyword": {
+			"patterns": [
+				{
+					"name": "keyword.line.rad",
+					"match": "^/.*"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.rad",
+					"match": "^#.*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.rad"
+}

@@ -1,0 +1,247 @@
+{
+    // ----------
+    // Starter入力
+    // ----------
+    // フォーマット
+    "#enddata":{
+        "prefix":"enddata",
+        "body":[
+            "#enddata"
+        ],
+        "description":"インクルードファイルでは、命令#enddata以降のすべての行が無視されます。"
+    },
+    "#include":{
+        "prefix":"include",
+        "body":[
+            "#include ${1:<filename>}"
+        ],
+        "description":"Starter入力（Runname_0000.rad）ファイルのインクルードファイルを指します。"
+    },
+    "#RADIOSS STARTER":{
+        "prefix":"RADIOSS STARTER",
+        "body":[
+            "#RADIOSS STARTER"
+        ],
+        "description":"Starter入力ファイル（Runname_0000.rad）の必須ヘッダーキーワード。これは、Radioss Starter入力の最初のキーワードにする必要があります。"
+    },
+    "/BEGIN":{
+        "prefix":"/BEGIN",
+        "body":[
+            "/BEGIN",
+            "                                                                                            ${1:Runname}",
+            "   ${2:Invers}",
+            "     ${3:Input_mass_unit}   ${4:Input_length_unit}   ${5:Input_length_unit}",
+            "      ${6:Work_mass_unit}    ${7:Work_length_unit}      ${8:Work_time_unit}"
+
+        ],
+        "description":"ランネーム、入力マニュアルのバージョン、Starterランおよび入力の数、そして作業単位系を設定します。"
+    },
+    "/END":{
+        "prefix":"/END",
+        "body":[
+            "/END"
+        ],
+        "description":"入力デックの最後に、このキーワードを設定する必要があります。"
+    },
+    "/PRIVATE/METADATA/FATXML":{
+        "prefix":"/PRIVATE/METADATA/FATXML",
+        "body":[
+            "/PRIVATE/METADATA/FATXML",
+            "${1:FATXML_data}"
+        ],
+        "description":"FATXMLフォーマットを読み取ります。"    
+    },
+    "/TITLE":{
+        "prefix":"/TITLE",
+        "body":[
+            "/TITLE",
+            "${1:Title}"
+        ],
+        "description":"タイトルを記述します。"    
+    },
+    // デフォルト値
+    "/DEF_SHELL":{
+        "prefix":"/DEF_SHELL",
+        "body":[
+            "/DEF_SHELL",
+            "    ${1:Ishell}    ${2:Ismstr}    ${3:Ithick}     ${4:Iplas}                                   ${5:Ish3n}     ${6:Idril}"
+        ],
+        "description":"このキーワードはすべてのシェルプロパティの特定パラメータのデフォルト値を設定するために使用されますが、オプションは各プロパティセット入力で変更でき、その場合、変更後のものが優先されます。"    
+    },
+    "/DEF_SOLID":{
+        "prefix":"/DEF_SOLID",
+        "body":[
+            "/DEF_SOLID",
+            "    ${1:Isolid}    ${2:Ismstr}     ${3:Icpre}             ${4:Itetra4}  ${5:Itetra10}      ${6:Imas}    ${7:Iframe}"
+        ],
+        "description":"すべてのソリッドプロパティと厚肉シェルの特定のパラメータのデフォルト値を設定します。ここで定義されるデフォルト値は、個々のプロパティ入力で入力された値によって上書きされます。"    
+    },
+    "/DEFAULT/INTER/TYPE2":{
+        "prefix":"/DEFAULT/INTER/TYPE2",
+        "body":[
+            "/DEFAULT/INTER/TYPE2",
+            "",
+            "                        ${1:Ignore}  ${2:Spotflag}             ${3:Isearch}     ${4:Idel2}"
+        ],
+        "description":"インターフェースタイプ2のデフォルト値を定義します。"    
+    },
+    "/DEFAULT/INTER/TYPE7":{
+        "prefix":"/DEFAULT/INTER/TYPE7",
+        "body":[
+            "/DEFAULT/INTER/TYPE7",
+            "",
+            "                          ${1:Istf}                ${2:Igap}                ${3:Ibag}      ${4:Idel}",
+            "",
+            "                                                                                  ${5:Irem_gap}   ${6:Irem_i2}"
+        ],
+        "description":"インターフェースタイプ7のデフォルト値を定義します。"    
+    },
+    "/DEFAULT/INTER/TYPE11":{
+        "prefix":"/DEFAULT/INTER/TYPE11",
+        "body":[
+            "/DEFAULT/INTER/TYPE11",
+            "",
+            "                          ${1:Istf}                ${2:Igap}    ${3:Irem_gap}      ${4:Idel}",
+            "                                                                                     ${5:Iform}",
+            "",
+            "                                  ${6:Inacti}"
+        ],
+        "description":"インターフェースタイプ11のデフォルト値を定義します。"    
+    },
+    "/DEFAULT/INTER/TYPE19":{
+        "prefix":"/DEFAULT/INTER/TYPE19",
+        "body":[
+            "/DEFAULT/INTER/TYPE19",
+            "",
+            "                          ${1:Istf}                ${2:Igap}     ${3:Iedge}      ${4:Ibag}      ${5:Idel}",
+            "",
+            "                                                                                  ${6:Irem_gap}   ${7:Irem_i2}"
+        ],
+        "description":"インターフェースタイプ19のデフォルト値を定義します。"    
+    },
+    "/DEFAULT/INTER/TYPE24":{
+        "prefix":"/DEFAULT/INTER/TYPE24",
+        "body":[
+            "/DEFAULT/INTER/TYPE24",
+            "",
+            "                          ${1:Istf}                       ${2:Irem_i2}                ${3:Idel}",
+            "                                   ${4:Iedge}",
+            "                                             ${5:Igap0}     ${6:Ipen0}"
+        ],
+        "description":"インターフェースタイプ24のデフォルト値を定義します。"    
+    },
+    "/DEFAULT/INTER/TYPE25":{
+        "prefix":"/DEFAULT/INTER/TYPE25",
+        "body":[
+            "/DEFAULT/INTER/TYPE25",
+            "",
+            "                          ${1:Istf}               ${2:Igap}   ${3:Irem_i2}                ${4:Idel}     ${5:Iedge}",
+            "",
+            "                                             ${6:Igap0}    ${7:Ishape}"
+        ],
+        "description":"インターフェースタイプ25のデフォルト値を定義します。"    
+    },
+    "/IMPLICIT":{
+        "prefix":"/IMPLICIT",
+        "body":[
+            "/IMPLICIT"
+        ],
+        "description":"このオプションを使用すると、陰解法計算に適したデフォルト値への変更が可能になります。"
+    },
+    "/SPHGLO":{
+        "prefix":"/SPHGLO",
+        "body":[
+            "/SPHGLO",
+            "               αsort    Maxsph    Lneigh    Nneigh  Isol2sph"
+        ],
+        "description":"SPHグローバルパラメーターを記述します。"
+    },
+    "/STAMPING":{
+        "prefix":"/STAMPING",
+        "body":[
+            "/STAMPING"
+        ],
+        "description":"このオプションを使用すると、スタンピングアプリケーションにとって適切なエラーメッセージを出力できます。"
+    },
+    // 計算
+    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
+    // 入力 / 出力
+    // 減衰
+    // ALEおよびCFD
+    // 節点
+    // 要素
+    // コンポーネントとパート構造
+    // インターフェース
+    // 材料
+    // プロパティ
+    // モニター体積（エアバッグ）
+    // 拘束
+    // 荷重ケース
+    // ツール
+    // グループ（セット）
+    // アダプティブメッシング
+    // 出力データベース
+    // ----------
+    // Engine入力
+    // ----------
+    // 一般的な制御
+    // フォーマット
+    "/ANIM/VERS":{
+        "prefix":"/ANIM/VERS",
+        "body":[
+            "/ANIM/VERS/${1:Version Number}"
+        ],
+        "description":"Radioss環境のポスト処理フォーマット41および44でアニメーションファイルを生成します。"
+    },
+    "/END/ENGINE":{
+        "prefix":"/END/ENGINE",
+        "body":[
+            "/END/ENGINE"
+        ],
+        "description":"単一ファイル入力を使用している場合、Engine入力デックの最後にはこのキーワードを設定する必要があります。"
+    },
+    "/TH/VERS":{
+        "prefix":"/TH/VERS",
+        "body":[
+            "/TH/VERS/${1:Version Number}"
+        ],
+        "description":"Radioss環境の後処理フォーマット“Version Number”で時刻歴ファイルを生成します。"
+    },
+    // "/TITLE":{
+    //     "prefix":"/TITLE",
+    //     "body":[
+    //         "/TITLE"
+    //     ],
+    //     "description":"タイトルを入力します。"
+    // },
+    "/VERS":{
+        "prefix":"/VERS",
+        "body":[
+            "/VERS/${1:Version Number}"
+        ],
+        "description":"入力データのバージョン番号を識別します。"
+    },
+    // 計算
+    "/KILL":{
+        "prefix":"/KILL",
+        "body":[
+            "${1:Emax} ${2:ΔMmax} ${3:ΔNmax} ${4:NTH} ${5:NANIM} ${6:NERR_POSIT}"
+        ],
+        "description":"入力データのバージョン番号を識別します。"
+    },
+    // 削除 / 入力修正
+    // アニメーションおよびポスト処理出力ファイル
+    // 陰解法
+    // 運動条件と荷重
+    // 時間ステップ
+    // 初期状態
+    "/DYNAIN/DT":{
+        "prefix":"/DYNAIN/DT",
+        "body":[
+            "/DYNAIN/DT/${1:Keyword3}",
+            "${2:Tstart} ${3:Tfreq}",
+            "${4:part_ID1 part_ID2 part_ID3}"
+        ],
+        "description":"状態ファイルに書き出される時間出力の頻度とパートを定義します。"
+    },
+}
