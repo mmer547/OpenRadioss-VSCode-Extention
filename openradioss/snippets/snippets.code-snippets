@@ -164,20 +164,87 @@
         "description":"このオプションを使用すると、スタンピングアプリケーションにとって適切なエラーメッセージを出力できます。"
     },
     // 計算
-    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
     // 入力 / 出力
     // 減衰
     // ALEおよびCFD
     // 節点
     // 要素
     // コンポーネントとパート構造
+    "/PART":{
+        "prefix":"/PART",
+        "body":[
+            "/PART/part_ID/unit_ID",
+            "part_title",
+            "   prop_ID    mat_ID subset_ID               Thick"
+        ],
+        "description":"材料とプロパティの情報を組み合わせたパートを定義します。オプションで、インターフェースのギャップを指定できます。"
+    },
     // インターフェース
+    "/INTER/TYPE21":{
+        "prefix":"/INTER/TYPE21/inter_ID/unit_ID",
+        "body":[
+            "/INTER/TYPE21/inter_ID/unit_ID",
+            "inter_title", 
+            "  surf_IDs  surf_IDm      Istf      Ithe      Igap                          Idel      Invn      Iadm",
+            "           Fscalegap              Gapmax               DEPTH                Pmax     ITlim",
+            "               Stmin               Stmax                                   Pskid",
+            "               Stfac                Fric              Gapmin              Tstart               Tstop",
+            "       IBC                        Inacti                VISs                                  Bumult",
+            "     Ifric    Ifiltr               Xfreq             sens_ID   fct_IDF             AscaleF",
+            "                  C1                  C2                  C3                  C4                  C5",
+            "                  C6",
+            "     NRadm                Padm            Angladm",
+            "                Kthe   fct_IDK            AscaleK                 Tint Ithe_form",
+            "                Frad                Drad               Fheat             fct_IDc               Dcond",
+            "     IDrby     IDref                Damp               Dampr",
+        ],
+        "description":"スタンピング用に設計された剛体のメインサーフェスとセカンダリサーフェス間に固有のインターフェース。メインサーフェスの全ての節点は剛体に属する必要があります。"
+    },
     // 材料
+    "/MAT/LAW1":{
+        "prefix":"/MAT/LAW1",
+        "body":[
+            "/MAT/LAW1/mat_ID/unit_ID",
+            "mat_title",
+            "     rho_i         E        nu"
+        ],
+        "description":"このキーワードは、フックの法則を使用して等方性の線形弾性材料を定義します。この材料則は応力とひずみの間の線形関係を表します。トラス、ビーム（タイプ3のみ）、シェルとソリッド要素に使用可能です。"
+    },
     // プロパティ
+    "/PROP/TYPE1":{
+        "prefix":"/PROP/TYPE1",
+        "body":[
+            "/PROP/TYPE1/prop_ID/unit_ID",
+            "prop_title",
+            "    Ishell    Ismstr     Ish3n     Idril    Ipinch                   P_thickfail",
+            "                  hm                  hf                  hr                  dm                  dn",
+            "         N                         Thick              Ashear              Ithick     Iplas"
+        ],
+        "description":"このキーワードは、フックの法則を使用して等方性の線形弾性材料を定義します。この材料則は応力とひずみの間の線形関係を表します。トラス、ビーム（タイプ3のみ）、シェルとソリッド要素に使用可能です。"
+    },
     // モニター体積（エアバッグ）
     // 拘束
     // 荷重ケース
+    "/PLOAD":{
+        "prefix":"/PLOAD",
+        "body":[
+            "/PLOAD/pload_ID/unit_ID",
+            "pload_title",
+            "   surf_ID   fct_IDT   sens_ID    Ipinch      Idel                       Ascalex             Fscaley"
+        ],
+        "description":"サーフェスへの圧力荷重を定義します。"
+    },
+    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
     // ツール
+    "/FUNCT":{
+        "prefix":"/FUNCT",
+        "body":[
+            "/FUNCT/fct_ID",
+            "fct_title",
+            "                   X                   Y"
+        ],
+        "description":"関数を定義します（例えば、応力（Y軸）をひずみ（X軸）の関数として定義します）。"
+    },
     // グループ（セット）
     // アダプティブメッシング
     // 出力データベース
