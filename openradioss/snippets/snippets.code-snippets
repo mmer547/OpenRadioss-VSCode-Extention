@@ -220,11 +220,64 @@
             "                  hm                  hf                  hr                  dm                  dn",
             "         N                         Thick              Ashear              Ithick     Iplas"
         ],
-        "description":"このキーワードは、フックの法則を使用して等方性の線形弾性材料を定義します。この材料則は応力とひずみの間の線形関係を表します。トラス、ビーム（タイプ3のみ）、シェルとソリッド要素に使用可能です。"
+        "description":"3節点または4節点のシェル要素で使用されるシェルプロパティセットを記述します。Belytschko、QBAT、またはQEPHのシェル定式化が利用可能です。"
+    },
+    "/PROP/TYPE14":{
+        "prefix":"/PROP/TYPE14",
+        "body":[
+            "/PROP/TYPE1/prop_ID/unit_ID",
+            "prop_title",
+            "    Isolid    Ismstr               Icpre  Itetra10     Inpts   Itetra4    Iframe                  dn",
+            "                  qa                  qb                   h                  λv                  μv",
+            "     Δtmin"
+        ],
+        "description":"このプロパティセットは、一般的なソリッドプロパティセットの定義に使用されます。"
     },
     // モニター体積（エアバッグ）
     // 拘束
+    "/RBODY":{
+        "prefix":"/RBODY",
+        "body":[
+            "/RBODY/rbody_ID/unit_ID",
+            "rbody_title",
+            "   node_ID   sens_ID   Skew_ID    Ispher                Mass   grnd_ID     Ikrem      ICoG   surf_ID",
+            "                 JXX                 JYY                 JZZ",
+            "                 JXY                 JYZ                 JXZ",
+            "   Ioptoff"
+        ],
+        "description":"剛体を定義します。"
+    }, 
+    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|" 
+    "/BCS":{
+        "prefix":"/BCS",
+        "body":[
+            "/BCS/bcs_ID",
+            "bcs_title",
+            "    Trarot   Skew_ID   grnd_ID"
+        ],
+        "description":"並進および回転移動に対する節点グループ上の境界条件を定義します。"
+    },    
     // 荷重ケース
+    "/INIVEL/AXIS":{
+        "prefix":"/INIVEL/AXIS",
+        "body":[
+            "/INIVEL/AXIS/inivel_ID/unit_ID",
+            "inivel_axis_title",
+            "       Dir  frame_ID   grnd_ID",
+            "                 Vxt                 Vyt                 Vzt                  Vr"
+        ],
+        "description":"節点グループの並進と回転の両方の速度を与えられた座標系で初期化します。"
+    },
+    "/GRAV":{
+        "prefix":"/GRAV",
+        "body":[
+            "/GRAV/grav_ID/unit_ID",
+            "grav_title",
+            "   fct_IDT       Dir   skew_ID   sens_ID   grnd_ID                       Ascalex             FscaleY"
+        ],
+        "description":"節点グループに対する重力荷重を定義します。"
+    },
+    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"    
     "/PLOAD":{
         "prefix":"/PLOAD",
         "body":[
@@ -246,6 +299,34 @@
         "description":"関数を定義します（例えば、応力（Y軸）をひずみ（X軸）の関数として定義します）。"
     },
     // グループ（セット）
+    "/GRNOD/PART":{
+        "prefix":"/GRNOD/PART",
+        "body":[
+            "/GRNOD/PART/grnd_ID/unit_ID",
+            "grnd_title",
+            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+        ],
+        "description":"指定されたパートに属する節点パートグループを記述します。"
+    },
+    "/SURF/PART":{
+        "prefix":"/SURF/PART",
+        "body":[
+            "/SURF/PART/surf_ID/unit_ID",
+            "surf_title",
+            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+        ],
+        "description":"指定されたパートに属するパートサーフェスを記述します。"
+    },
+    "/SURF/PART/EXT":{
+        "prefix":"/SURF/PART/EXT",
+        "body":[
+            "/SURF/PART/EXT/surf_ID/unit_ID",
+            "surf_title",
+            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+        ],
+        "description":"指定されたパートに属する外部パートサーフェスを記述します。"
+    },
+    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
     // アダプティブメッシング
     // 出力データベース
     // ----------
@@ -292,12 +373,80 @@
     "/KILL":{
         "prefix":"/KILL",
         "body":[
+            "/KILL",
             "${1:Emax} ${2:ΔMmax} ${3:ΔNmax} ${4:NTH} ${5:NANIM} ${6:NERR_POSIT}"
         ],
         "description":"入力データのバージョン番号を識別します。"
     },
+    "/RUN":{
+        "prefix":"/RUN",
+        "body":[
+            "/RUN/Run Name/Run Number/Restart Letter",
+            "${1:Tstop}"
+        ],
+        "description":"実行番号を指定します。"
+    },
+    "/STOP":{
+        "prefix":"/STOP",
+        "body":[
+            "/STOP",
+            "${1:Emax} ${1:ΔMmax} ${1:ΔNmax} ${1:NTH} ${1:NANIM} ${1:NERR_POSIT}"
+        ],
+        "description":"エネルギーエラー率基準、総質量率基準、または節点質量率基準に達すると、Engineは停止されます。"
+    },
     // 削除 / 入力修正
     // アニメーションおよびポスト処理出力ファイル
+    "/ANIM/DT":{
+        "prefix":"ANIM/DT",
+        "body":[
+            "/ANIM/DT",
+            "${1:Tstart} ${2:Tfreq}"
+        ],
+        "description":"時間間隔Tfreqでアニメーションファイル（A-ファイル）を書き出します。最初のファイルはTstartの時点で書き出します。アニメーションファイル名はRunnameAnnnとなります。ここで、Runnameはランネーム、nnnはファイル番号です。"
+    },
+    "/ANIM/VECT":{
+        "prefix":"ANIM/VECT",
+        "body":[
+            "/ANIM/VECT/Restype",
+            "${1:Tstart} ${2:Tfreq}"
+        ],
+        "description":"指定された変数のベクトルデータを含むアニメーションファイルを生成します。"
+    },
+    "/ANIM/Eltyp/Restype":{
+        "prefix":"/ANIM/Eltyp/Restype",
+        "body":[
+            "/ANIM/Eltyp/Restype",
+        ],
+        "description":"指定した結果の要素データを含むアニメーションファイルを生成します。ビーム、スプリングおよびトラス要素タイプに使用されるオプション。"
+    },
+    "/ANIM/BRICK/TENS":{
+        "prefix":"/ANIM/BRICK/TENS",
+        "body":[
+            "/ANIM/BRICK/TENS/Keyword4/Keyword5",
+        ],
+        "description":"全体座標系における3次元ソリッド要素のテンソルデータ（指定した積分点での値または平均値）を含むアニメーションファイルを生成します。"
+    },
+    "/ANIM/SHELL/Restype":{
+        "prefix":"/ANIM/SHELL/Restype",
+        "body":[
+            "/ANIM/SHELL/Restype",
+        ],
+        "description":"指定した結果のシェル要素データを含むアニメーションファイルを生成します。シェルタイプの要素に使用されるオプション。"
+    },
+    "/ANIM/SHELL/EPSP":{
+        "prefix":"/ANIM/SHELL/EPSP",
+        "body":[
+            "/ANIM/SHELL/EPSP/Keyword4/Keyword5",
+        ],
+        "description":"シェル要素の積分点の関数としての塑性ひずみを含むアニメーションファイルを生成します。"
+    },
+    "/ANIM/SHELL/TENS":{
+        "prefix":"/ANIM/SHELL/TENS",
+        "body":[
+            "/ANIM/SHELL/TENS/Restype/Keyword5/Keyword6",
+        ],
+        "description":"指定した結果のシェルテンソルデータを含むアニメーションファイルを生成します。"
+    },
     // 陰解法
     // 運動条件と荷重
     // 時間ステップ
