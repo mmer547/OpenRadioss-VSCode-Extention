@@ -31,7 +31,8 @@
             "                                                                                            ${1:Runname}",
             "   ${2:Invers}",
             "     ${3:Input_mass_unit}   ${4:Input_length_unit}   ${5:Input_length_unit}",
-            "      ${6:Work_mass_unit}    ${7:Work_length_unit}      ${8:Work_time_unit}"
+            "      ${6:Work_mass_unit}    ${7:Work_length_unit}      ${8:Work_time_unit}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
 
         ],
         "description":"ランネーム、入力マニュアルのバージョン、Starterランおよび入力の数、そして作業単位系を設定します。"
@@ -47,7 +48,8 @@
         "prefix":"/PRIVATE/METADATA/FATXML",
         "body":[
             "/PRIVATE/METADATA/FATXML",
-            "${1:FATXML_data}"
+            "${1:FATXML_data}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"FATXMLフォーマットを読み取ります。"    
     },
@@ -64,7 +66,8 @@
         "prefix":"/DEF_SHELL",
         "body":[
             "/DEF_SHELL",
-            "    ${1:Ishell}    ${2:Ismstr}    ${3:Ithick}     ${4:Iplas}                                   ${5:Ish3n}     ${6:Idril}"
+            "    ${1:Ishell}    ${2:Ismstr}    ${3:Ithick}     ${4:Iplas}                                   ${5:Ish3n}     ${6:Idril}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"このキーワードはすべてのシェルプロパティの特定パラメータのデフォルト値を設定するために使用されますが、オプションは各プロパティセット入力で変更でき、その場合、変更後のものが優先されます。"    
     },
@@ -72,7 +75,8 @@
         "prefix":"/DEF_SOLID",
         "body":[
             "/DEF_SOLID",
-            "    ${1:Isolid}    ${2:Ismstr}     ${3:Icpre}             ${4:Itetra4}  ${5:Itetra10}      ${6:Imas}    ${7:Iframe}"
+            "    ${1:Isolid}    ${2:Ismstr}     ${3:Icpre}             ${4:Itetra4}  ${5:Itetra10}      ${6:Imas}    ${7:Iframe}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"すべてのソリッドプロパティと厚肉シェルの特定のパラメータのデフォルト値を設定します。ここで定義されるデフォルト値は、個々のプロパティ入力で入力された値によって上書きされます。"    
     },
@@ -81,7 +85,8 @@
         "body":[
             "/DEFAULT/INTER/TYPE2",
             "",
-            "                        ${1:Ignore}  ${2:Spotflag}             ${3:Isearch}     ${4:Idel2}"
+            "                        ${1:Ignore}  ${2:Spotflag}             ${3:Isearch}     ${4:Idel2}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"インターフェースタイプ2のデフォルト値を定義します。"    
     },
@@ -92,7 +97,8 @@
             "",
             "                          ${1:Istf}                ${2:Igap}                ${3:Ibag}      ${4:Idel}",
             "",
-            "                                                                                  ${5:Irem_gap}   ${6:Irem_i2}"
+            "                                                                                  ${5:Irem_gap}   ${6:Irem_i2}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"インターフェースタイプ7のデフォルト値を定義します。"    
     },
@@ -126,7 +132,8 @@
             "",
             "                          ${1:Istf}                       ${2:Irem_i2}                ${3:Idel}",
             "                                   ${4:Iedge}",
-            "                                             ${5:Igap0}     ${6:Ipen0}"
+            "                                             ${5:Igap0}     ${6:Ipen0}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"インターフェースタイプ24のデフォルト値を定義します。"    
     },
@@ -137,7 +144,8 @@
             "",
             "                          ${1:Istf}               ${2:Igap}   ${3:Irem_i2}                ${4:Idel}     ${5:Iedge}",
             "",
-            "                                             ${6:Igap0}    ${7:Ishape}"
+            "                                             ${6:Igap0}    ${7:Ishape}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"インターフェースタイプ25のデフォルト値を定義します。"    
     },
@@ -152,7 +160,8 @@
         "prefix":"/SPHGLO",
         "body":[
             "/SPHGLO",
-            "               αsort    Maxsph    Lneigh    Nneigh  Isol2sph"
+            "               ${1:αsort}    ${2:Maxsph}    ${3:Lneigh}    ${4:Nneigh}  ${5:Isol2sph}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"SPHグローバルパラメーターを記述します。"
     },
@@ -173,9 +182,10 @@
     "/PART":{
         "prefix":"/PART",
         "body":[
-            "/PART/part_ID/unit_ID",
-            "part_title",
-            "   prop_ID    mat_ID subset_ID               Thick"
+            "/PART/${1:part_ID}/${2:unit_ID}",
+            "${3:part_title}",
+            "   ${4:prop_ID}    ${5:mat_ID} ${6:subset_ID}               ${7:Thick}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"材料とプロパティの情報を組み合わせたパートを定義します。オプションで、インターフェースのギャップを指定できます。"
     },
@@ -183,20 +193,21 @@
     "/INTER/TYPE21":{
         "prefix":"/INTER/TYPE21/inter_ID/unit_ID",
         "body":[
-            "/INTER/TYPE21/inter_ID/unit_ID",
-            "inter_title", 
-            "  surf_IDs  surf_IDm      Istf      Ithe      Igap                          Idel      Invn      Iadm",
-            "           Fscalegap              Gapmax               DEPTH                Pmax     ITlim",
-            "               Stmin               Stmax                                   Pskid",
-            "               Stfac                Fric              Gapmin              Tstart               Tstop",
-            "       IBC                        Inacti                VISs                                  Bumult",
-            "     Ifric    Ifiltr               Xfreq             sens_ID   fct_IDF             AscaleF",
-            "                  C1                  C2                  C3                  C4                  C5",
-            "                  C6",
-            "     NRadm                Padm            Angladm",
-            "                Kthe   fct_IDK            AscaleK                 Tint Ithe_form",
-            "                Frad                Drad               Fheat             fct_IDc               Dcond",
-            "     IDrby     IDref                Damp               Dampr",
+            "/INTER/TYPE21/${1:inter_ID}/${2:unit_ID}",
+            "${3:inter_title}", 
+            "  ${4:surf_IDs}  ${5:surf_IDm}      ${6:Istf}      ${7:Ithe}      ${8:Igap}                          ${9:Idel}      ${10:Invn}      ${11:Iadm}",
+            "           ${12:Fscalegap}              ${13:Gapmax}               ${14:DEPTH}                ${15:Pmax}     ${16:ITlim}",
+            "               ${17:Stmin}               ${18:Stmax}                                   ${19:Pskid}",
+            "               ${20:Stfac}                ${21:Fric}              ${22:Gapmin}              ${23:Tstart}               ${24:Tstop}",
+            "       ${25:IBC}                        ${26:Inacti}                ${27:VISs}                                  ${28:Bumult",
+            "     ${29:Ifric}    ${30:Ifiltr}               ${31:Xfreq}             ${32:sens_ID}   ${33:fct_IDF}             ${34:AscaleF}",
+            "                  ${35:C1}                  ${36:C2}                  ${37:C3}                  ${38:C4}                  ${39:C5}",
+            "                  ${40:C6}",
+            "     ${41:NRadm}                ${42:Padm}            ${43:Angladm}",
+            "                ${44:Kthe}   ${45:fct_IDK}            ${46:AscaleK}                 ${47:Tint Ithe_form}",
+            "                ${48:Frad}                ${49:Drad}               ${50:Fheat}             ${51:fct_IDc}               ${52:Dcond}",
+            "     ${53:IDrby}     ${54:IDref}                ${55:Damp}               ${56:Dampr}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"スタンピング用に設計された剛体のメインサーフェスとセカンダリサーフェス間に固有のインターフェース。メインサーフェスの全ての節点は剛体に属する必要があります。"
     },
@@ -204,9 +215,10 @@
     "/MAT/LAW1":{
         "prefix":"/MAT/LAW1",
         "body":[
-            "/MAT/LAW1/mat_ID/unit_ID",
-            "mat_title",
-            "     rho_i         E        nu"
+            "/MAT/LAW1/${1:mat_ID}/${2:unit_ID}",
+            "${3:mat_title}",
+            "     ${4:rho_i}         ${5:E}        ${6:nu}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"このキーワードは、フックの法則を使用して等方性の線形弾性材料を定義します。この材料則は応力とひずみの間の線形関係を表します。トラス、ビーム（タイプ3のみ）、シェルとソリッド要素に使用可能です。"
     },
@@ -214,22 +226,24 @@
     "/PROP/TYPE1":{
         "prefix":"/PROP/TYPE1",
         "body":[
-            "/PROP/TYPE1/prop_ID/unit_ID",
-            "prop_title",
-            "    Ishell    Ismstr     Ish3n     Idril    Ipinch                   P_thickfail",
-            "                  hm                  hf                  hr                  dm                  dn",
-            "         N                         Thick              Ashear              Ithick     Iplas"
+            "/PROP/TYPE1/${1:prop_ID}/${2:unit_ID}",
+            "${3:prop_title}",
+            "    ${4:Ishell}    ${5:Ismstr}     ${6:Ish3n}     ${7:Idril}    ${8:Ipinch}                   ${9:P_thickfail}",
+            "                  ${10:hm}                  ${11:hf}                  ${12:hr}                  ${13:dm}                  ${14:dn}",
+            "         ${15:N}                         ${16:Thick}              ${17:Ashear}              ${18:Ithick}     ${19:Iplas}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"3節点または4節点のシェル要素で使用されるシェルプロパティセットを記述します。Belytschko、QBAT、またはQEPHのシェル定式化が利用可能です。"
     },
     "/PROP/TYPE14":{
         "prefix":"/PROP/TYPE14",
         "body":[
-            "/PROP/TYPE1/prop_ID/unit_ID",
-            "prop_title",
-            "    Isolid    Ismstr               Icpre  Itetra10     Inpts   Itetra4    Iframe                  dn",
-            "                  qa                  qb                   h                  λv                  μv",
-            "     Δtmin"
+            "/PROP/TYPE1/${1:prop_ID}/${2:unit_ID}",
+            "${3:prop_title$}",
+            "    ${4:Isolid}    ${5:Ismstr}               ${6:Icpre}  ${7:Itetra10}     ${8:Inpts}   ${9:Itetra4}    ${10:Iframe}                  ${11:dn}",
+            "                  ${12:qa}                  ${13:qb}                   ${14:h}                  ${15:λv}                  ${16:μv}",
+            "     ${17:Δtmin}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"このプロパティセットは、一般的なソリッドプロパティセットの定義に使用されます。"
     },
@@ -238,22 +252,22 @@
     "/RBODY":{
         "prefix":"/RBODY",
         "body":[
-            "/RBODY/rbody_ID/unit_ID",
-            "rbody_title",
-            "   node_ID   sens_ID   Skew_ID    Ispher                Mass   grnd_ID     Ikrem      ICoG   surf_ID",
-            "                 JXX                 JYY                 JZZ",
-            "                 JXY                 JYZ                 JXZ",
-            "   Ioptoff"
+            "/RBODY/${1:rbody_ID}/${2:unit_ID}",
+            "${3:rbody_title}",
+            "   ${4:node_ID}   ${5:sens_ID}   ${6:Skew_ID}    ${7:Ispher}                ${8:Mass}   ${9:grnd_ID}     ${10:Ikrem}      ${11:ICoG}   ${12:surf_ID}",
+            "                 ${13:JXX}                 ${14:JYY}                 ${15:JZZ}",
+            "                 ${16:JXY}                 ${17:JYZ}                 ${18:JXZ}",
+            "   ${19:Ioptoff}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"剛体を定義します。"
     }, 
-    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|" 
     "/BCS":{
         "prefix":"/BCS",
         "body":[
-            "/BCS/bcs_ID",
-            "bcs_title",
-            "    Trarot   Skew_ID   grnd_ID"
+            "/BCS/${1:bcs_ID}",
+            "${2:bcs_title}",
+            "    ${3:Trarot}   ${4:Skew_ID}   ${5:grnd_ID}"
         ],
         "description":"並進および回転移動に対する節点グループ上の境界条件を定義します。"
     },    
@@ -261,40 +275,42 @@
     "/INIVEL/AXIS":{
         "prefix":"/INIVEL/AXIS",
         "body":[
-            "/INIVEL/AXIS/inivel_ID/unit_ID",
-            "inivel_axis_title",
-            "       Dir  frame_ID   grnd_ID",
-            "                 Vxt                 Vyt                 Vzt                  Vr"
+            "/INIVEL/AXIS/${1:inivel_ID}/${2:unit_ID}",
+            "${3:inivel_axis_title}",
+            "       ${4:Dir}  ${5:frame_ID}   ${6:grnd_ID}",
+            "                 ${7:Vxt}                 ${8:Vyt}                 ${9:Vzt}                  ${10:Vr}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"節点グループの並進と回転の両方の速度を与えられた座標系で初期化します。"
     },
     "/GRAV":{
         "prefix":"/GRAV",
         "body":[
-            "/GRAV/grav_ID/unit_ID",
-            "grav_title",
-            "   fct_IDT       Dir   skew_ID   sens_ID   grnd_ID                       Ascalex             FscaleY"
+            "/GRAV/${1:grav_ID}/${2:unit_ID}",
+            "${3:grav_title}",
+            "   ${4:fct_ID}T       ${5:Dir}   ${6:skew_ID}   ${7:sens_ID}   ${8:grnd_ID}                       ${9:Ascalex}             ${10:FscaleY}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"節点グループに対する重力荷重を定義します。"
     },
-    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"    
     "/PLOAD":{
         "prefix":"/PLOAD",
         "body":[
-            "/PLOAD/pload_ID/unit_ID",
-            "pload_title",
-            "   surf_ID   fct_IDT   sens_ID    Ipinch      Idel                       Ascalex             Fscaley"
+            "/PLOAD/${1:pload_ID}/${2:unit_ID}",
+            "${3:pload_title}",
+            "   ${4:surf_ID}   ${5:fct_IDT}   ${6:sens_ID}    ${7:Ipinch}      ${8:Idel}                       ${9:Ascalex}             ${10:Fscaley}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"サーフェスへの圧力荷重を定義します。"
     },
-    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
     // ツール
     "/FUNCT":{
         "prefix":"/FUNCT",
         "body":[
-            "/FUNCT/fct_ID",
-            "fct_title",
-            "                   X                   Y"
+            "/FUNCT/${1:fct_ID}",
+            "${2:fct_title}",
+            "                   ${3:X}                   ${4:Y}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"関数を定義します（例えば、応力（Y軸）をひずみ（X軸）の関数として定義します）。"
     },
@@ -302,31 +318,33 @@
     "/GRNOD/PART":{
         "prefix":"/GRNOD/PART",
         "body":[
-            "/GRNOD/PART/grnd_ID/unit_ID",
-            "grnd_title",
-            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+            "/GRNOD/PART/${1:grnd_ID}/${2:unit_ID}",
+            "${3:grnd_title}",
+            "  ${4:item_ID1}  ${5:item_ID2}  ${6:item_ID3}  ${7:item_ID4}  ${8:item_ID5}  ${9:item_ID6}  ${10:item_ID7}  ${11:item_ID8}  ${12:item_ID9} ${13:item_ID10}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"指定されたパートに属する節点パートグループを記述します。"
     },
     "/SURF/PART":{
         "prefix":"/SURF/PART",
         "body":[
-            "/SURF/PART/surf_ID/unit_ID",
-            "surf_title",
-            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+            "/SURF/PART/${1:surf_ID}/${2:unit_ID}",
+            "${3:surf_title}",
+            "  ${4:item_ID1}  ${5:item_ID2}  ${6:item_ID3}  ${7:item_ID4}  ${8:item_ID5}  ${9:item_ID6}  ${10:item_ID7}  ${11:item_ID8}  ${12:item_ID9} ${13:item_ID10}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"指定されたパートに属するパートサーフェスを記述します。"
     },
     "/SURF/PART/EXT":{
         "prefix":"/SURF/PART/EXT",
         "body":[
-            "/SURF/PART/EXT/surf_ID/unit_ID",
-            "surf_title",
-            "  item_ID1  item_ID2  item_ID3  item_ID4  item_ID5  item_ID6  item_ID7  item_ID8  item_ID9 item_ID10"
+            "/SURF/PART/EXT/${1:surf_ID}/${2:unit_ID}",
+            "${3:surf_title}",
+            "  ${4:item_ID1}  ${5:item_ID2}  ${6:item_ID3}  ${7:item_ID4}  ${8:item_ID5}  ${9:item_ID6}  ${10:item_ID7}  ${11:item_ID8}  ${12:item_ID9} ${13:item_ID10}",
+            "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
         ],
         "description":"指定されたパートに属する外部パートサーフェスを記述します。"
     },
-    //      "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
     // アダプティブメッシング
     // 出力データベース
     // ----------
@@ -381,8 +399,8 @@
     "/RUN":{
         "prefix":"/RUN",
         "body":[
-            "/RUN/Run Name/Run Number/Restart Letter",
-            "${1:Tstop}"
+            "/RUN/${1:Run Name}/${2:un Number}/${3:Restart Letter}",
+            "${4:Tstop}"
         ],
         "description":"実行番号を指定します。"
     },
@@ -390,7 +408,7 @@
         "prefix":"/STOP",
         "body":[
             "/STOP",
-            "${1:Emax} ${1:ΔMmax} ${1:ΔNmax} ${1:NTH} ${1:NANIM} ${1:NERR_POSIT}"
+            "${1:Emax} ${2:ΔMmax} ${3:ΔNmax} ${4:NTH} ${5:NANIM} ${6:NERR_POSIT}"
         ],
         "description":"エネルギーエラー率基準、総質量率基準、または節点質量率基準に達すると、Engineは停止されます。"
     },
@@ -407,43 +425,43 @@
     "/ANIM/VECT":{
         "prefix":"ANIM/VECT",
         "body":[
-            "/ANIM/VECT/Restype",
-            "${1:Tstart} ${2:Tfreq}"
+            "/ANIM/VECT/${1:Restype}",
+            "${2:Tstart} ${3:Tfreq}"
         ],
         "description":"指定された変数のベクトルデータを含むアニメーションファイルを生成します。"
     },
     "/ANIM/Eltyp/Restype":{
         "prefix":"/ANIM/Eltyp/Restype",
         "body":[
-            "/ANIM/Eltyp/Restype",
+            "/ANIM/Eltyp/${1:Restype}",
         ],
         "description":"指定した結果の要素データを含むアニメーションファイルを生成します。ビーム、スプリングおよびトラス要素タイプに使用されるオプション。"
     },
     "/ANIM/BRICK/TENS":{
         "prefix":"/ANIM/BRICK/TENS",
         "body":[
-            "/ANIM/BRICK/TENS/Keyword4/Keyword5",
+            "/ANIM/BRICK/TENS/${1:Keyword4}/${2:Keyword5}",
         ],
         "description":"全体座標系における3次元ソリッド要素のテンソルデータ（指定した積分点での値または平均値）を含むアニメーションファイルを生成します。"
     },
     "/ANIM/SHELL/Restype":{
         "prefix":"/ANIM/SHELL/Restype",
         "body":[
-            "/ANIM/SHELL/Restype",
+            "/ANIM/SHELL/${1:Restype}",
         ],
         "description":"指定した結果のシェル要素データを含むアニメーションファイルを生成します。シェルタイプの要素に使用されるオプション。"
     },
     "/ANIM/SHELL/EPSP":{
         "prefix":"/ANIM/SHELL/EPSP",
         "body":[
-            "/ANIM/SHELL/EPSP/Keyword4/Keyword5",
+            "/ANIM/SHELL/EPSP/${1:Keyword4}/${2:Keyword5}",
         ],
         "description":"シェル要素の積分点の関数としての塑性ひずみを含むアニメーションファイルを生成します。"
     },
     "/ANIM/SHELL/TENS":{
         "prefix":"/ANIM/SHELL/TENS",
         "body":[
-            "/ANIM/SHELL/TENS/Restype/Keyword5/Keyword6",
+            "/ANIM/SHELL/TENS/${1:Restype}/${2:Keyword5}/${3:Keyword6}",
         ],
         "description":"指定した結果のシェルテンソルデータを含むアニメーションファイルを生成します。"
     },

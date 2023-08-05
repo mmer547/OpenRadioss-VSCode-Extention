@@ -1,13 +1,13 @@
 {
-  "name": "openradioss",
-  "displayName": "OpenRadioss",
+  "name": "openradioss-helper",
+  "displayName": "OpenRadioss-helper",
   "description": "This is OpenRadioss helper.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.79.0"
   },
   "categories": [
-    "Programming Languages"
+    "CAE"
   ],
   "contributes": {
     "languages": [{
