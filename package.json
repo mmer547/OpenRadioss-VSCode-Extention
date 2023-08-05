@@ -1,0 +1,30 @@
+{
+  "name": "openradioss-helper",
+  "displayName": "OpenRadioss-helper",
+  "description": "This is OpenRadioss helper.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "CAE"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rad",
+      "aliases": ["openradioss", "rad"],
+      "extensions": ["rad"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rad",
+      "scopeName": "source.rad",
+      "path": "./syntaxes/rad.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "rad",
+      "scopeName": "source.rad",
+      "path": "./snippets/snippets.code-snippets"
+    }]
+  }
+}
