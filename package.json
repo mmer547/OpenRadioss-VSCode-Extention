@@ -12,7 +12,7 @@
   "contributes": {
     "languages": [{
       "id": "rad",
-      "aliases": ["openradioss", "rad"],
+      "aliases": ["OpenRadioss", "rad"],
       "extensions": ["rad"],
       "configuration": "./language-configuration.json"
     }],
