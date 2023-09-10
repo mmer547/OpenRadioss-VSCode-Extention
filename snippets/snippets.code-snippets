@@ -173,6 +173,86 @@
         "description":"このオプションを使用すると、スタンピングアプリケーションにとって適切なエラーメッセージを出力できます。"
     },
     // 計算
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/ANALY":{
+        "prefix":"/ANALY",
+        "body":[
+            "//ANALY",
+            "     N2D3D   IparithIsubcycle"
+        ],
+        "description":"解析のタイプを定義し、解析フラグを設定します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
+    "/AMS":{
+        "prefix":"/AMS",
+        "body":[
+            "//AMS",
+            " grpart_ID"
+        ],
+        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
+    },
     // 入力 / 出力
     // 減衰
     // ALEおよびCFD
