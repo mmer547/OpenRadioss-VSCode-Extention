@@ -26,5 +26,7 @@
       "scopeName": "source.rad",
       "path": "./snippets/snippets.code-snippets"
     }]
-  }
+  },
+  "publisher": "mmer547",
+  "repository": "https://github.com/mmer547/OpenRadioss-VSCode-Extention"
 }
