@@ -2,9 +2,9 @@
   "name": "openradioss-helper",
   "displayName": "OpenRadioss-helper",
   "description": "This is OpenRadioss helper.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
-    "vscode": "^1.79.0"
+    "vscode": "^1.94.0"
   },
   "categories": [
     "CAE"
