@@ -15,3 +15,7 @@ Testing may be inadequate.
 ### 0.1.0
 
 The keywords used in the OpenRadioss study group mini-workshop are now supported.
+
+### 0.2.0
+
+Input interpolation for all cards is now supported. However, formats are not fully supported.
