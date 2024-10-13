@@ -7,7 +7,7 @@
     "vscode": "^1.94.0"
   },
   "categories": [
-    "CAE"
+    "Other"
   ],
   "contributes": {
     "languages": [{
