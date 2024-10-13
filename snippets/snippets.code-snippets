@@ -176,21 +176,15 @@
     "/AMS":{
         "prefix":"/AMS",
         "body":[
-<<<<<<< HEAD
             "/AMS",
             " ${1:grpart_ID}",
             "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
-=======
-            "//AMS",
-            " grpart_ID"
->>>>>>> e49a57a1ead17b09bc823d2cc4f36bf4384ce108
         ],
         "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
     },
     "/ANALY":{
         "prefix":"/ANALY",
         "body":[
-<<<<<<< HEAD
             "/ANALY",
             "     ${1:N2D3D}   ${2:Iparith} ${3:Isubcycle}",
             "#---1----|----2----|----3----|----4----|----5----|----6----|----7----|----8----|----9----|---10----|"
@@ -245,76 +239,6 @@
         ""
         ],
         "description":"下記のキーワードの局所単位系を定義します。"
-=======
-            "//ANALY",
-            "     N2D3D   IparithIsubcycle"
-        ],
-        "description":"解析のタイプを定義し、解析フラグを設定します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
-    },
-    "/AMS":{
-        "prefix":"/AMS",
-        "body":[
-            "//AMS",
-            " grpart_ID"
-        ],
-        "description":"アドバンストマススケーリングが作用するパートグループを記述します。"
->>>>>>> e49a57a1ead17b09bc823d2cc4f36bf4384ce108
     },
     // 入力 / 出力
     "/ANIM/VERS":{
