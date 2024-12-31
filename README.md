@@ -23,3 +23,7 @@ Input interpolation for all cards is now supported. However, formats are not ful
 ### 0.2.1
 
 Add logo.
+
+### 0.3
+
+Add manual link to any card comment
